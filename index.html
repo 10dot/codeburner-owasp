@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Codeburner</title>
+
+    <meta name="description" content="An introduction to Codeburner for the EKG crowd">
+    <meta name="author" content="Alex Lock">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/groupon.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Codeburner</h1>
+          <h4>secure static analysis for everyone</h4>
+          <p>
+            <small>Created by Alex Lock</a> / <a href="mailto:alock@groupon.com">alock@groupon.com</a></small>
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h2>First a little history...</h2>
+            <small>(what's this all about?)</small>
+          </section>
+          <section>
+            <h2>A bit about static analysis</h2>
+            <p class="fragment">Traditional static analysis has a few problems:</p>
+            <ul>
+              <li class="fragment">Multiple tools, all good at one thing</li>
+              <li class="fragment">Variable integration points</li>
+              <li class="fragment">No common report format</li>
+              <li class="fragment">Speed (some are very, very slow)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>This is where pipeline comes in</h2>
+            <small>(with a bit of help from GeekOn)</small>
+            <p class="fragment">OWASP pipeline is a tool for running multiple analysis tools and aggregating the results.</p><br>
+            <p class="fragment">Developed in partnership with Groupon AppSec, pipeline was envisioned as a way to easily scan releases in an automated way.</p><br>
+            <p class="fragment">Pipeline is ideal for integration into larger tools, which brings us to...
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Introducing... Codeburner!</h2>
+          </section>
+          <section>
+            <h2>What is Codeburner?</h2>
+            <p class="fragment">Codeburner builds on OWASP pipeline.  By providing a unified
+            interface to view and act on the results of various tools, it answers the question: "I've got all these static analysis results... now what?"</p>
+            <br>
+            <p class="fragment">Key Features:
+              <ul class="fragment">
+                <li>Tight integration with Groupon services</li>
+                <li>Highly scalable, asynchronous scanning with multiple OSS and commercial tools</li>
+                <li>Advanced false positive filtering</li>
+                <li>Integrates with JIRA and GitHub for publishing issues</li>
+              </ul>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          Codeburner Demo Time!
+        </section>
+
+        <section>
+          <h2>Links!</h2>
+          <ul>
+            <li><a href="https://codeburner.groupondev.com" target="_blank">Codeburner</a></li>
+            <li><a href="https://github.groupondev.com/ApplicationSecurity/codeburner" target="_blank">Codeburner GitHub Repository</a></li>
+            <li><a href="https://github.com/OWASP/pipeline" target="_blank">OWASP pipeline</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Hey, I want a copy of this deck!?</h2>
+          <p>Of course you do!  Just clone the repo:<br>
+            <pre><code data-trim>
+  ~$ git clone github.groupondev.com:/alock/codeburner-ekg
+  Cloning into 'codeburner-ekg'...
+            </pre></code></p>
+          <p>And open index.html in a browser that supports CSS 3D (Chrome/Safari/Firefox)</p>
+        </section>
+
+        <section>
+          <h1>Q&A Time!</h1>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
