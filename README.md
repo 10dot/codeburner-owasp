@@ -1,7 +1,7 @@
 Codeburner OWASP
 ==================
 
-A quick overview of [Codeburner](https://codeburner.groupondev.com/)
+A quick overview of [Codeburner](https://github.com/groupon/codeburner/)
 
 Instructions:
 
